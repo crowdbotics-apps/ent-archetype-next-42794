@@ -1,6 +1,6 @@
 import axios from "axios"
 const entworkflowcanvasAPI = axios.create({
-  baseURL: "https://ent-workflow-canvas-42794.botics.co",
+  baseURL: "https://ent-archetype-next-42794.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
