@@ -8,6 +8,30 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_customer_list(payload) {
+  return entworkflowcanvasAPI.get(`/api/v1/customer/`)
+}
+function api_v1_customer_create(payload) {
+  return entworkflowcanvasAPI.post(`/api/v1/customer/`, payload.data)
+}
+function api_v1_customer_retrieve(payload) {
+  return entworkflowcanvasAPI.get(`/api/v1/customer/${payload.id}/`)
+}
+function api_v1_customer_update(payload) {
+  return entworkflowcanvasAPI.put(
+    `/api/v1/customer/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_customer_partial_update(payload) {
+  return entworkflowcanvasAPI.patch(
+    `/api/v1/customer/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_customer_destroy(payload) {
+  return entworkflowcanvasAPI.delete(`/api/v1/customer/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return entworkflowcanvasAPI.post(`/api/v1/login/`, payload.data)
 }
@@ -55,6 +79,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_customer_list,
+  api_v1_customer_create,
+  api_v1_customer_retrieve,
+  api_v1_customer_update,
+  api_v1_customer_partial_update,
+  api_v1_customer_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
