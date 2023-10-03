@@ -12,34 +12,28 @@ function api_v1_customer_list(payload) {
   return entworkflowcanvasAPI.get(`/api/v1/customer/`)
 }
 function api_v1_customer_create(payload) {
-  return entworkflowcanvasAPI.post(`/api/v1/customer/`, payload.data)
+  return entworkflowcanvasAPI.post(`/api/v1/customer/`, payload)
 }
 function api_v1_customer_retrieve(payload) {
   return entworkflowcanvasAPI.get(`/api/v1/customer/${payload.id}/`)
 }
 function api_v1_customer_update(payload) {
-  return entworkflowcanvasAPI.put(
-    `/api/v1/customer/${payload.id}/`,
-    payload.data
-  )
+  return entworkflowcanvasAPI.put(`/api/v1/customer/${payload.id}/`, payload)
 }
 function api_v1_customer_partial_update(payload) {
-  return entworkflowcanvasAPI.patch(
-    `/api/v1/customer/${payload.id}/`,
-    payload.data
-  )
+  return entworkflowcanvasAPI.patch(`/api/v1/customer/${payload.id}/`, payload)
 }
 function api_v1_customer_destroy(payload) {
   return entworkflowcanvasAPI.delete(`/api/v1/customer/${payload.id}/`)
 }
 function api_v1_login_create(payload) {
-  return entworkflowcanvasAPI.post(`/api/v1/login/`, payload.data)
+  return entworkflowcanvasAPI.post(`/api/v1/login/`, payload)
 }
 function api_v1_signup_create(payload) {
-  return entworkflowcanvasAPI.post(`/api/v1/signup/`, payload.data)
+  return entworkflowcanvasAPI.post(`/api/v1/signup/`, payload)
 }
 function rest_auth_login_create(payload) {
-  return entworkflowcanvasAPI.post(`/rest-auth/login/`, payload.data)
+  return entworkflowcanvasAPI.post(`/rest-auth/login/`, payload)
 }
 function rest_auth_logout_retrieve(payload) {
   return entworkflowcanvasAPI.get(`/rest-auth/logout/`)
@@ -48,34 +42,34 @@ function rest_auth_logout_create(payload) {
   return entworkflowcanvasAPI.post(`/rest-auth/logout/`)
 }
 function rest_auth_password_change_create(payload) {
-  return entworkflowcanvasAPI.post(`/rest-auth/password/change/`, payload.data)
+  return entworkflowcanvasAPI.post(`/rest-auth/password/change/`, payload)
 }
 function rest_auth_password_reset_create(payload) {
-  return entworkflowcanvasAPI.post(`/rest-auth/password/reset/`, payload.data)
+  return entworkflowcanvasAPI.post(`/rest-auth/password/reset/`, payload)
 }
 function rest_auth_password_reset_confirm_create(payload) {
   return entworkflowcanvasAPI.post(
     `/rest-auth/password/reset/confirm/`,
-    payload.data
+    payload
   )
 }
 function rest_auth_registration_create(payload) {
-  return entworkflowcanvasAPI.post(`/rest-auth/registration/`, payload.data)
+  return entworkflowcanvasAPI.post(`/rest-auth/registration/`, payload)
 }
 function rest_auth_registration_verify_email_create(payload) {
   return entworkflowcanvasAPI.post(
     `/rest-auth/registration/verify-email/`,
-    payload.data
+    payload
   )
 }
 function rest_auth_user_retrieve(payload) {
   return entworkflowcanvasAPI.get(`/rest-auth/user/`)
 }
 function rest_auth_user_update(payload) {
-  return entworkflowcanvasAPI.put(`/rest-auth/user/`, payload.data)
+  return entworkflowcanvasAPI.put(`/rest-auth/user/`, payload)
 }
 function rest_auth_user_partial_update(payload) {
-  return entworkflowcanvasAPI.patch(`/rest-auth/user/`, payload.data)
+  return entworkflowcanvasAPI.patch(`/rest-auth/user/`, payload)
 }
 export const apiService = {
   api_docs_schema_retrieve,
